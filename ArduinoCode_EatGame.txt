@@ -1,0 +1,38 @@
+int up = 2; int down = 3; int left = 4; int right = 5;
+int u,d,l,r; 
+void setup() {
+
+ pinMode(up,INPUT);
+ pinMode(down,INPUT);
+ pinMode(left,INPUT);
+ pinMode(right,INPUT);
+ Serial.begin(9600);
+}
+
+void loop() {
+  u = digitalRead(up);
+  d = digitalRead(down);
+  l = digitalRead(left);
+  r = digitalRead(right);
+ if(u==LOW){
+   Serial.write(2);
+   
+    delay(100);
+ }
+
+ if(d==LOW){
+   Serial.write(1);
+   
+   delay(100); 
+ }
+  if(l==LOW){
+   Serial.write(4);
+   
+   delay(100); 
+ }
+ if(r==LOW){
+   Serial.write(5);
+   
+   delay(100); 
+ }
+ }
